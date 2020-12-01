@@ -1,5 +1,115 @@
-h1 {
-  color: green;
+body {
+  background-color: #f7f7f7;
 }
 
-/** test **/
+h1,
+h2 {
+  font-family: "Bebas Neue", cursive;
+}
+
+h4 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/** splash **/
+
+.splash-container {
+  position: relative;
+}
+
+.splash-container h1 {
+  color: white;
+  font-size: 5rem;
+}
+
+.splash-img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  filter: blur(2px);
+}
+
+.splash-middle {
+  position: absolute;
+  left: 0;
+  top: 30%;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 300px;
+}
+
+.logo-img {
+  width: 300px;
+}
+
+/** info **/
+
+#info .img-container {
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+#info .img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  margin: 0 0 15px;
+}
+
+/** arrangementer **/
+
+#events h1 {
+  margin-bottom: 40px;
+}
+
+#events .img-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+#events .img-container img {
+  width: 100%;
+  margin: 0 0 15px;
+}
+
+/** social **/
+
+#social h1 {
+  margin-bottom: 40px;
+}
+
+.social-button {
+  margin-top: -10px;
+  height: 50px;
+  font-size: 2rem;
+  line-height: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.line {
+  margin-top: 10px;
+  width: 100%;
+  height: 2px;
+  background-color: grey;
+}
+
+.social {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/** footer **/
+
+/* #footer {
+  background-color: #337357;
+  color: white;
+} */
