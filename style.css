@@ -130,6 +130,29 @@ p {
 
 /** footer **/
 
+/* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+.map_container {
+  height: 50vh;
+  width: 100%;
+  contain: content;
+}
+
+#map1 {
+  height: 100%;
+  position: inherit;
+  overflow: visible;
+}
+
+/* Optional: Makes the sample page fill the window.
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} */
+
 #footer .img-container {
   margin: 0 auto;
   margin: 40px 0 20px 0;
