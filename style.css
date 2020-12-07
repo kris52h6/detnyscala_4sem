@@ -139,6 +139,15 @@ p {
   margin-bottom: 40px;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "insta1 insta2 insta3"
+    "insta4 insta5 insta3";
+}
+
 /** footer **/
 
 /* Always set the map height explicitly to define the size of the div
