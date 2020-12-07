@@ -1,6 +1,9 @@
 body {
   background-color: #f7f7f7;
 }
+img {
+  width: 100%;
+}
 
 h1,
 h2 {
@@ -144,14 +147,18 @@ p {
   margin-bottom: 40px;
 }
 
-.grid {
+/* .grid {
   display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-columns: 20vw 20vw 32.8vw;
+  grid-template-rows: 40vh 40vh 20vh;
   grid-template-areas:
     "insta1 insta2 insta3"
     "insta4 insta5 insta3";
-}
+
+  width: 100%;
+  column-gap: 15px;
+  row-gap: 20px;
+} */
 
 /** footer **/
 
@@ -191,4 +198,41 @@ body {
 #footer {
   background-color: #1d1c19;
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 20vw 20vw 32.8vw;
+    grid-template-rows: 40vh 40vh 10vh;
+    grid-template-areas:
+      "insta1 insta2 insta3"
+      "insta4 insta5 insta3";
+
+    width: 100%;
+    column-gap: 15px;
+    row-gap: 20px;
+  }
+
+  .social-button {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    height: 50px;
+    width: 200px;
+
+    line-height: 50px;
+    text-align: center;
+    border: 2px solid black;
+  }
+  .social-link {
+    height: 50px;
+    width: 200px;
+    font-size: 2rem;
+    color: black;
+  }
+  /* .social-container {
+    display: flex;
+    flex-wrap: wrap;
+  } */
 }
