@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlbc0dCa6KldH72AHrSrDp0HKHMWw2dUE&map_ids=4d4d4a87dc380f52&callback=initMap"
+      defer
+    ></script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Det Ny Scala</title>
 
@@ -73,8 +78,24 @@
         <div class="container">
             
             <h1>ARRANGEMENTER</h1>
+
+            <template id="event-template">
+                <div class="img-container">
+                    <div class="color-container"></div>
+                <img src="" class="img">
+            </div>
+                <h2 class="headline"></h2>
+                <p class="text"></p>
+                <p class="text2"></p>
+
+            </template>
+
+            <section class="eventlist"></section>
+
+       
             
-            <div class="img-container">
+            
+            <!-- <div class="img-container">
                 <img src="img/scala_sport.png">
             </div>
 
@@ -100,15 +121,15 @@
                 Så kom og vær med til quizz-aften! Hold øje med vores Facebook/Instagram
                 For opdateringer om hvornår vi afholder quizz.
                 </p>
-            </div>
+            </div> -->
            
-            <div class="img-container">
+            <!-- <div class="img-container">
                 <img src="img/scala_sessions.jpg">
             </div>
             <h2>SCALA SESSIONS</h2>
             <div class="text">
                 <p>Scala sessions vil forsøge at give musikere en unik og intim scene, hvor de kan vise deres kunst til et live publikum. Vi søger samtidig via film og lyd at give kunstnerne en lækker og professionel markedsføringsmulighed. Læs mere og kontakt os på vores Facebook</p>
-            </div>
+            </div> -->
                 
             
         </div>
@@ -130,12 +151,51 @@
     </div>
 
     <section id="footer">
+     
+        
+            <div class="map_container">
+            <div id="map1"></div>
+      
+        </div>
         <div class="container">
-
             <div class="img-container">
                 <img src="/img/scala_logo2.png">
             </div>
+
             <div class="footer-div">
+                <h4>KONTAKT</h2>
+                    <p>Det Ny Scala<br>
+                    Ravnsborggade 8<br>
+                    2200 København<br>
+                    Danmark<br>
+                    CVR: xxx<br>
+                    <br>
+                    Tlf.: +45 20 30 40 50<br>
+                    Email: info@detnyscala.dk
+                    
+                    </p>
+            </div>
+
+            <template id="footer-template">
+                <div class="footer-div">
+                <p></p>
+            </div>
+            </template>
+            
+            <h4>ÅBNINGSTIDER</h4>
+            <section class="footerlist">
+
+            </section>
+
+            <div class="footer-div">
+            <h4>COVID-19</h4>
+            <p class="covid"></p>
+        </div>
+
+
+            
+            <section class="covidlist"></section>
+            <!-- <div class="footer-div">
                 <h4>KONTAKT</h2>
                     <p>Det Ny Scala<br>
                     Ravnsborggade 8<br>
@@ -161,12 +221,13 @@
                 <p>Hos Det Ny Scala forholder vi os til COVID-19. Vi tager alle forholdsregler og vi har masser af sprit, plexiglas, sikre siddepladser.
                     Vi beder jer om at huske mundbind, god hygiejne og afstand. 
                     Hjælp os ved at lytte til bartenderen og følg de givne regler.  </p>
-        </div>
+        </div> -->
         
     </div>
 
-    </section>
 
+    </section>
+<script src="script.js"></script>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
