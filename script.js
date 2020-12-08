@@ -33,17 +33,27 @@ function vis(eventJson, footerJson, covidJson) {
     modtagerFooter.innerHTML = "";
     modtagerCovid.innerHTML = "";
 
+    let counter = 0;
+
     eventJson.forEach((event) =>  {
         const klonEvent = eventSkabelon.cloneNode(true).content;
         console.log(event)
         klonEvent.querySelector(".img").src = event.img.guid;
-
         klonEvent.querySelector(".headline").textContent = event.headline;
         klonEvent.querySelector(".text").textContent = event.text;
         klonEvent.querySelector(".text2").textContent = event.text2;
+        counter++;
+        klonEvent.querySelector(".color-container").classList.add("color-container" + counter);
+        // klonEvent.querySelector(".headline").classList.add("headline" + counter);
+        // klonEvent.querySelector(".text").classList.add("text" + counter);
+        // klonEvent.querySelector(".text2").classList.add("text2" + counter);
+
         modtagerEvent.appendChild(klonEvent);
 
     })
+    // document.querySelector(".headline2").className = "headline col-md-pull-6";
+    // document.querySelector(".text2").className = "text col-md-pull-6";
+    // document.querySelector(".text22").className = "text2 col-md-pull-6";
 
 
     footerJson.forEach((openinghour) => {

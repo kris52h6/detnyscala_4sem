@@ -42,12 +42,13 @@
 
     <section id="info">
         <div class="container">
-
-            <div class="img-container">
+            <div class="row">
+            <div class="img-container col-md-5 col-md-push-1">
                 <img src="img/scala1.png">
             </div>  
-        <h1>KOM FORBI</h1>
-        <div class="text">        
+            
+        <h1 class="col-md-6">KOM FORBI</h1>
+        <div class="text col-md-6">        
             <p>Det Ny Scala til hygge, billige øl og drinks, filterkaffe og flæskesvær.
             Med beliggenhed i hjertet af Nørrebro er du blot en cykeltur fra
             at slukke tørsten med store fadøl, omringet af den traditionelle
@@ -58,14 +59,19 @@
             torsdag-lørdag 13.00-22.00. 
             Og tager altid imod jeres bestillinger med et smil på læben.</p>
              </div>
+            </div>
+            <div class="wrapper">
 
-             <div class="img-container">
+            <div class="row">
+             <div class="drink img-container col-md-5 col-md-push-1">
                 <img src="img/scala_drinks.png">
             </div>  
-             <h1>PRØV VORES</h1>
-             <div class="text">
+             <h1 class="col-md-6">PRØV VORES</h1>
+             <div class="text col-md-6">
                  <p>Hjemmebryggede shots i mange lækre og farverige varianter </p>
              </div>
+            </div>
+        </div>
         </div>
 
 
@@ -80,14 +86,17 @@
             <h1>ARRANGEMENTER</h1>
 
             <template id="event-template">
-                <div class="img-container">
+                <div class="row">
+                <div class="img-container col-md-6 col-md-push-1">
                     <div class="color-container"></div>
                     <img src="" class="img">
             </div>
-                <h2 class="headline"></h2>
-                <p class="text"></p>
-                <p class="text2"></p>
-
+            <div class="event-text">
+                <h2 class="headline col-md-6 col-md-push-1"></h2>
+                <p class="text col-md-6 col-md-push-1"></p>
+                <p class="text2 col-md-6 col-md-push-1"></p>
+            </div>
+            </div>
             </template>
 
             <section class="eventlist"></section>
@@ -140,11 +149,11 @@
         <div class="container social-container">
             <h1>FØLG OS</h1>
             <div class="grid">
-                <div class="insta1"><img src="img/twoDrinks.png" alt=""></div>
-                <div class="insta2"><img src="img/outside.png" alt=""></div>
+                <div class="insta insta1"><img src="img/twoDrinks.png" alt=""></div>
+                <div class="insta insta2"><img src="img/outside.png" alt=""></div>
                 <div class="insta3"><img src="img/tallOutside.png" alt=""></div>
-                <div class="insta4"><img src="img/outside2.png" alt=""></div>
-                <div class="insta5"><img src="img/indside.png" alt=""></div>
+                <div class="insta insta4"><img src="img/outside2.png" alt=""></div>
+                <div class="insta insta5"><img src="img/indside.png" alt=""></div>
             </div>
             
             <div class="social-button">
