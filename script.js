@@ -36,24 +36,27 @@ function vis(eventJson, footerJson, covidJson) {
     let counter = 0;
 
     eventJson.forEach((event) =>  {
+      /** henter indhold fra wp */
         const klonEvent = eventSkabelon.cloneNode(true).content;
-        console.log(event)
         klonEvent.querySelector(".img").src = event.img.guid;
         klonEvent.querySelector(".headline").textContent = event.headline;
         klonEvent.querySelector(".text").textContent = event.text;
-        klonEvent.querySelector(".text2").textContent = event.text2;
+
+      /** bruges som counter, til at kunne target de specifikke elementer i html'en */
         counter++;
         klonEvent.querySelector(".color-container").classList.add("color-container" + counter);
-        // klonEvent.querySelector(".headline").classList.add("headline" + counter);
-        // klonEvent.querySelector(".text").classList.add("text" + counter);
-        // klonEvent.querySelector(".text2").classList.add("text2" + counter);
-
+        klonEvent.querySelector(".color-container").classList.add("color-container" + counter);
+        klonEvent.querySelector(".headline").classList.add("headline" + counter);
+        klonEvent.querySelector(".text").classList.add("text" + counter);
+        klonEvent.querySelector(".img-container").classList.add("img-container" + counter);
+        
         modtagerEvent.appendChild(klonEvent);
 
     })
-    // document.querySelector(".headline2").className = "headline col-md-pull-6";
-    // document.querySelector(".text2").className = "text col-md-pull-6";
-    // document.querySelector(".text22").className = "text2 col-md-pull-6";
+
+    document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-3";
+    document.querySelector(".text2").className = "text col-md-6 col-md-pull-3";
+    document.querySelector(".img-container2").className = "img-container col-md-6 col-md-push-7";
 
 
     footerJson.forEach((openinghour) => {
