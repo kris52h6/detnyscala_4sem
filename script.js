@@ -54,9 +54,9 @@ function vis(eventJson, footerJson, covidJson) {
 
     })
 
-    document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-3";
-    document.querySelector(".text2").className = "text col-md-6 col-md-pull-3";
-    document.querySelector(".img-container2").className = "img-container col-md-6 col-md-push-7";
+    document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-5";
+    document.querySelector(".text2").className = "text col-md-6 col-md-pull-5";
+    document.querySelector(".img-container2").className = "img-container col-md-6 col-md-push-6";
 
 
     footerJson.forEach((openinghour) => {
