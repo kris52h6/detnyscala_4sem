@@ -73,6 +73,9 @@ p {
   margin: auto;
   width: 300px;
 }
+#landing-page .splash-middle .splash-text {
+  width: 500px;
+}
 
 .logo-img {
   width: 300px;
@@ -331,19 +334,6 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-  /* #landing-page .splash-middle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: absolute;
-    left: 0;
-    top: 30%;
-    bottom: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 300px;
-  } */
-
   #info .row {
     margin-top: 50px;
     margin-bottom: 50px;
