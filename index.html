@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlbc0dCa6KldH72AHrSrDp0HKHMWw2dUE&map_ids=4d4d4a87dc380f52&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlbc0dCa6KldH72AHrSrDp0HKHMWw2dUE&map_ids=4d4d4a87dc380f52&"
       defer
     ></script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -21,6 +21,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+
+    
 
 
 
@@ -53,7 +55,7 @@
         <div class="container">
             <div class="row">
             <div class="img-container col-md-5 col-md-push-1">
-                <img src="img/scala1.png">
+                <img src="img/scala_outside.jpg">
             </div>  
             
         <h2 class="col-md-6">KOM FORBI</h2>
@@ -120,12 +122,23 @@
             <h1>Følg os</h1>
             <img src="img/instagram.png">
         </div>
-            <div class="grid">
-                <div class="insta insta1"><img src="img/twoDrinks.png" alt=""></div>
+
+        <template id="insta-template">
+            <div class="insta"><img src="">
+        </div>
+        </template>
+        <!-- <div class="grid"> -->
+
+        <section class="grid"></section>
+
+  
+
+
+                <!-- <div class="insta insta1"><img src="img/twoDrinks.png" alt=""></div>
                 <div class="insta insta2"><img src="img/outside.png" alt=""></div>
                 <div class="insta3"><img src="img/tallOutside.png" alt=""></div>
                 <div class="insta insta4"><img src="img/outside2.png" alt=""></div>
-                <div class="insta insta5"><img src="img/indside.png" alt=""></div>
+                <div class="insta insta5"><img src="img/indside.png" alt=""></div> -->
             </div>
             
             <div class="social-button">
@@ -174,10 +187,15 @@
             </section>
             <img src="img/instagram.png" class="insta-icon">
         </div>
+
+        <!-- <template id="covid-template">
+            <p></p>
+        </template> -->
+        
             <div class="footer-div">
-            <h4>COVID-19</h4>
-            <p class="covid"></p>
-        </div>
+                <h4>COVID-19</h4>
+                <p class="covid"></p>
+            </div>
 
 
             
