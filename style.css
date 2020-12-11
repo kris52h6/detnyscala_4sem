@@ -170,10 +170,12 @@ p {
 
 /** arrangementer **/
 
-#events .splash-img img {
+#events .splash-img {
   width: 100%;
   filter: grayscale(1);
-
+  height: 500px;
+  background-position: center;
+  background-size: cover;
   background-image: url("img/Artboard_2.png");
 }
 
@@ -513,20 +515,19 @@ body {
   #events .color-container2 {
     margin-left: 100px;
   }
-}
+  .parallax {
+    /* The image used */
+    /* background-image: url("img/scala.jpg"); */
 
-.parallax {
-  /* The image used */
-  /* background-image: url("img/scala.jpg"); */
+    /* Set a specific height */
+    min-height: 500px;
 
-  /* Set a specific height */
-  min-height: 500px;
-
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -539,5 +540,11 @@ body {
     height: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+@media only screen and (max-device-width: 1000px) {
+  .parallax {
+    background-attachment: scroll;
   }
 }
