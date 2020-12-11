@@ -14,7 +14,10 @@ img {
   width: 100%;
 }
 
-h1,
+h1 {
+  font-family: "Comfortaa light";
+}
+
 h2 {
   font-family: "Bebas Neue", cursive;
 }
@@ -135,7 +138,7 @@ p {
   margin: 0 0 15px;
 }
 
-#info h1 {
+#info h2 {
   margin: 0 0 -20px 40px;
   z-index: 100;
 }
@@ -322,7 +325,7 @@ body {
     margin: 0 0 -20px 60px;
   }
 
-  #info h1 {
+  #info h2 {
     margin-top: 100px;
   }
 
