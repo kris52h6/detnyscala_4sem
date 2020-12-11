@@ -172,7 +172,7 @@ p {
 
 /** arrangementer **/
 
-#events .splash-img img {
+#events .splash-img {
   width: 100%;
   filter: grayscale(1);
 
