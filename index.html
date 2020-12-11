@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlbc0dCa6KldH72AHrSrDp0HKHMWw2dUE&map_ids=4d4d4a87dc380f52&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlbc0dCa6KldH72AHrSrDp0HKHMWw2dUE&map_ids=4d4d4a87dc380f52&"
       defer
     ></script>
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -22,6 +22,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
 
+    
+
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -34,16 +36,17 @@
   <body>
       <section id="landing-page">
     <div class="splash-container">
-        <img src="/img/scala.jpg" class="splash-img">
+        <div class="parallax splash-img"></div>
+        <!-- <img src="/img/scala.jpg" class="splash-img"> -->
         <div class="splash-middle">
-        <img src="img/ScalaLogo.png" class="logo-img">
-        <h1 class="splash-text">RAVNSBORGGADE 8</h1>
-        <!-- <a href="#info">↓</a> -->
-        <a href="#info">
-        <!-- pil fra https://codepen.io/StrengthandFreedom/pen/zajxqd -->
-        <svg class="arrow-circle-down bounce" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+            <img src="img/ScalaLogo.png" class="logo-img">
+            <h1 class="splash-text">RAVNSBORGGADE 8</h1>
+            <!-- <a href="#info">↓</a> -->
+             <a href="#info">
+             <!-- pil fra https://codepen.io/StrengthandFreedom/pen/zajxqd -->
+             <svg class="arrow-circle-down bounce" viewbox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
             <path d="M1412 897q0-27-18-45l-91-91q-18-18-45-18t-45 18l-189 189v-502q0-26-19-45t-45-19h-128q-26 0-45 19t-19 45v502l-189-189q-19-19-45-19t-45 19l-91 91q-18 18-18 45t18 45l362 362 91 91q18 18 45 18t45-18l91-91 362-362q18-18 18-45zm252-1q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z" fill="#fff"></path></svg>
-        </a>
+            </a>
         </div>
     </div>
         </section>
@@ -53,7 +56,7 @@
         <div class="container">
             <div class="row">
             <div class="img-container col-md-5 col-md-push-1">
-                <img src="img/scala1.png">
+                <img src="img/scala_outside.jpg">
             </div>  
             
         <h2 class="col-md-6">KOM FORBI</h2>
@@ -63,9 +66,9 @@
             at slukke tørsten med store fadøl, omringet af den traditionelle
             værtshusstemning.
             <br><br>
-            Vi har åbent:
-            søndag-onsdag 15.00-22.00 
-            torsdag-lørdag 13.00-22.00. 
+            Vi har åbent: <br>
+            søndag-onsdag 15.00-22.00 <br>
+            torsdag-lørdag 13.00-22.00. <br>
             Og tager altid imod jeres bestillinger med et smil på læben.</p>
              </div>
             </div>
@@ -85,8 +88,8 @@
     </section>
 
     <section id="events">
-        <div class="splash-img">
-            <img src="img/scala_beers.jpg">
+        <div class="parallax splash-img">
+            <!-- <img src="img/Artboard 2.png"> -->
         </div>  
         <div class="container">
             <div class="line"></div>
@@ -120,12 +123,23 @@
             <h1>Følg os</h1>
             <img src="img/instagram.png">
         </div>
-            <div class="grid">
-                <div class="insta insta1"><img src="img/twoDrinks.png" alt=""></div>
+
+        <template id="insta-template">
+            <div class="insta"><img src="">
+        </div>
+        </template>
+        <!-- <div class="grid"> -->
+
+        <section class="grid"></section>
+
+  
+
+
+                <!-- <div class="insta insta1"><img src="img/twoDrinks.png" alt=""></div>
                 <div class="insta insta2"><img src="img/outside.png" alt=""></div>
                 <div class="insta3"><img src="img/tallOutside.png" alt=""></div>
                 <div class="insta insta4"><img src="img/outside2.png" alt=""></div>
-                <div class="insta insta5"><img src="img/indside.png" alt=""></div>
+                <div class="insta insta5"><img src="img/indside.png" alt=""></div> -->
             </div>
             
             <div class="social-button">
@@ -174,10 +188,15 @@
             </section>
             <img src="img/instagram.png" class="insta-icon">
         </div>
+
+        <!-- <template id="covid-template">
+            <p></p>
+        </template> -->
+        
             <div class="footer-div">
-            <h4>COVID-19</h4>
-            <p class="covid"></p>
-        </div>
+                <h4>COVID-19</h4>
+                <p class="covid"></p>
+            </div>
 
 
             

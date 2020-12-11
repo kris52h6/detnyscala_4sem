@@ -1,6 +1,9 @@
 "use strict";
 
+
+
 const url = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/event";
+const instaUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/instagramimage"
 const footerUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/openinghour";
 const covidUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/covid";
 
@@ -9,32 +12,50 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
     document.querySelector(".splash-container a").classList.add("bounce");
     hentJson();
+    initMap();
 }
 
-async function hentJson(eventJson, footerJson, covidJson) {
+async function hentJson(eventJson, instaJson, footerJson, covidJson) {
     const response = await fetch(url);
     eventJson = await response.json();
+
+    const responseInsta = await fetch(instaUrl);
+    instaJson = await responseInsta.json();
+    console.log(instaJson);
+
     const responseFooter = await fetch(footerUrl);
     footerJson = await responseFooter.json();
+
     const responseCovid = await fetch(covidUrl);
     covidJson = await responseCovid.json();
-    vis(eventJson, footerJson, covidJson);
+    console.log(covidJson);
+    vis(eventJson, instaJson, footerJson, covidJson);
 }
 
-function vis(eventJson, footerJson, covidJson) {
+function vis(eventJson, instaJson, footerJson, covidJson) {
   const modtagerEvent = document.querySelector(".eventlist");
   const eventSkabelon = document.querySelector("#event-template");
+
+  const modtagerInsta = document.querySelector(".grid");
+  const instaSkabelon = document.querySelector("#insta-template");
+
   const modtagerFooter = document.querySelector(".footerlist");
   const footerSkabelon = document.querySelector("#footer-template");
+
   const modtagerCovid = document.querySelector(".covidlist");
   const covidSkabelon = document.querySelector("#covid-template");
 
+  console.log(instaJson);
+
 
     modtagerEvent.innerHTML = "";
+    modtagerInsta.innerHTML = "";
+
     modtagerFooter.innerHTML = "";
     modtagerCovid.innerHTML = "";
 
     let counter = 0;
+    let instaCounter = 0;
 
     eventJson.forEach((event) =>  {
       /** henter indhold fra wp */
@@ -55,6 +76,17 @@ function vis(eventJson, footerJson, covidJson) {
 
     })
 
+    instaJson.forEach((instaimage) => {
+      const klonInsta = instaSkabelon.cloneNode(true).content;
+      instaCounter++;
+
+      klonInsta.querySelector("img").src = instaimage.igimage.guid;
+      klonInsta.querySelector(".insta").classList.add("insta" + instaCounter);
+
+      modtagerInsta.appendChild(klonInsta);
+
+    }) 
+
     document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-5";
     document.querySelector(".text2").className = "text col-md-6 col-md-pull-5";
     document.querySelector(".img-container2").className = "img-container col-md-6 col-md-push-6";
@@ -63,16 +95,12 @@ function vis(eventJson, footerJson, covidJson) {
     footerJson.forEach((openinghour) => {
         const klonFooter = footerSkabelon.cloneNode(true).content;
         klonFooter.querySelector("p").textContent = openinghour.text;
+        console.log(openinghour.text);
         
         modtagerFooter.appendChild(klonFooter);
     })
 
     document.querySelector(".covid").textContent = covidJson[0].text;
-
-
-
-
-
 
 
 }

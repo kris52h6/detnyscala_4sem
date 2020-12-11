@@ -14,12 +14,19 @@ img {
   width: 100%;
 }
 
+text {
+  color: black;
+}
+
 h1 {
-  font-family: "Comfortaa light";
+  font-family: "Comfortaa", cursive;
+  color: black;
 }
 
 h2 {
   font-family: "Bebas Neue", cursive;
+  font-size: 4rem;
+  color: black;
 }
 
 h4 {
@@ -30,6 +37,7 @@ h4 {
 p {
   font-size: 2rem;
   font-family: "Quicksand", sans-serif;
+  color: black;
   /* font-family: "Montserrat", sans-serif; */
 }
 
@@ -41,7 +49,7 @@ p {
 
 #landing-page .splash-container h1 {
   color: white;
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 #landing-page .splash-img {
@@ -49,6 +57,11 @@ p {
   height: 100vh;
   object-fit: cover;
   filter: grayscale(1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-image: url("img/scala.jpg");
 }
 
 #landing-page .splash-middle {
@@ -159,6 +172,8 @@ p {
 #events .splash-img img {
   width: 100%;
   filter: grayscale(1);
+
+  background-image: url("img/Artboard_2.png");
 }
 
 #events h1 {
@@ -316,6 +331,19 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  /* #landing-page .splash-middle {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 30%;
+    bottom: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+  } */
+
   #info .row {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -340,13 +368,15 @@ body {
   /** events **/
 
   #events h1 {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
-  #events .splash-img img {
+  #events .splash-img {
     width: 100%;
     height: 500px;
     object-fit: cover;
+
+    background-image: url("img/Artboard_2.png");
   }
 
   #events .color-container {
@@ -367,8 +397,8 @@ body {
     grid-template-columns: 1fr 1fr 1.5fr;
     grid-template-rows: 40vh 40vh 10vh;
     grid-template-areas:
-      "insta1 insta2 insta3"
-      "insta4 insta5 insta3";
+      "insta1 insta2 insta5"
+      "insta3 insta4 insta5";
 
     width: 100%;
     column-gap: 15px;
@@ -385,13 +415,13 @@ body {
     overflow: hidden;
   }
 
-  .insta3 {
+  .insta5 {
     grid-column: 3;
     grid-row: 1/3;
     overflow: hidden;
   }
 
-  .insta3 img {
+  .insta5 img {
     height: 100%;
   }
 
@@ -477,6 +507,20 @@ body {
   #events .img-container img {
     width: 400px;
     height: 250px;
+  }
+
+  .parallax {
+    /* The image used */
+    /* background-image: url("img/scala.jpg"); */
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
