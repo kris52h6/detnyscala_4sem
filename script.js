@@ -87,8 +87,8 @@ function vis(eventJson, instaJson, footerJson, covidJson) {
 
     }) 
 
-    document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-5";
-    document.querySelector(".text2").className = "text col-md-6 col-md-pull-5";
+    document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-4";
+    document.querySelector(".text2").className = "text col-md-6 col-md-pull-4";
     document.querySelector(".img-container2").className = "img-container col-md-6 col-md-push-6";
 
 

@@ -50,6 +50,7 @@ p {
 #landing-page .splash-container h1 {
   color: white;
   font-size: 3rem;
+  text-align: center;
 }
 
 #landing-page .splash-img {
@@ -72,9 +73,6 @@ p {
   right: 0;
   margin: auto;
   width: 300px;
-}
-#landing-page .splash-middle .splash-text {
-  width: 500px;
 }
 
 .logo-img {
@@ -334,6 +332,14 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  #landing-page .splash-middle .splash-text {
+    width: 500px;
+  }
+
+  #landing-page .splash-container h1 {
+    text-align: inherit;
+  }
+
   #info .row {
     margin-top: 50px;
     margin-bottom: 50px;
@@ -367,6 +373,10 @@ body {
     object-fit: cover;
 
     background-image: url("img/Artboard_2.png");
+  }
+
+  #events h2 {
+    margin: 0 0 -20px 60px;
   }
 
   #events .color-container {
@@ -444,6 +454,7 @@ body {
 
   #footer p {
     font-size: 1.5rem;
+    color: white;
   }
 
   #footer .container {
@@ -487,7 +498,7 @@ body {
 @media only screen and (min-width: 1000px) {
   #events .row {
     margin: 0 auto;
-    width: 900px;
+    width: 1000px;
   }
   #events .img-container {
     width: 400px;
@@ -495,23 +506,27 @@ body {
   }
 
   #events .img-container img {
-    width: 400px;
-    height: 250px;
+    width: 450px;
+    height: 300px;
   }
 
-  .parallax {
-    /* The image used */
-    /* background-image: url("img/scala.jpg"); */
-
-    /* Set a specific height */
-    min-height: 500px;
-
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  #events .color-container2 {
+    margin-left: 100px;
   }
+}
+
+.parallax {
+  /* The image used */
+  /* background-image: url("img/scala.jpg"); */
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 768px) {
