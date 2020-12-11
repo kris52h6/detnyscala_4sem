@@ -1,11 +1,23 @@
 body {
   background-color: #f7f7f7;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+#main {
+  overflow-y: scroll;
+}
+
 img {
   width: 100%;
 }
 
-h1,
+h1 {
+  font-family: "Comfortaa light";
+}
+
 h2 {
   font-family: "Bebas Neue", cursive;
 }
@@ -53,6 +65,64 @@ p {
   width: 300px;
 }
 
+.splash-container a {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.splash-container svg {
+  width: 50px;
+  height: 50px;
+}
+
+/** animation fra https://codepen.io/StrengthandFreedom/pen/zajxqd **/
+
+.bounce {
+  -webkit-animation: bounce 2s;
+  animation: bounce 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  50%,
+  75%,
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+  60% {
+    -webkit-transform: translateY(-12px);
+    transform: translateY(-12px);
+  }
+}
+
 /** info **/
 
 #info .img-container {
@@ -64,11 +134,11 @@ p {
 #info .img-container img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   margin: 0 0 15px;
 }
 
-#info h1 {
+#info h2 {
   margin: 0 0 -20px 40px;
   z-index: 100;
 }
@@ -238,6 +308,13 @@ body {
   color: white;
 }
 
+#footer .insta-icon {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin: 20px 0 0 0;
+}
+
 @media only screen and (min-width: 768px) {
   #info .row {
     margin-top: 50px;
@@ -245,10 +322,10 @@ body {
   }
 
   #info h1 {
-    margin: 0 0 -20px 40px;
+    margin: 0 0 -20px 60px;
   }
 
-  #info h1 {
+  #info h2 {
     margin-top: 100px;
   }
 
@@ -360,7 +437,7 @@ body {
     padding: 10px;
     /* margin: 0 10px 0 10px; */
     flex-grow: 1;
-    flex-basis: 250px;
+    flex-basis: 200px;
   }
 
   .footer-div:nth-child(5) {
@@ -371,6 +448,19 @@ body {
   #footer .img-container {
     flex-grow: 1;
     flex-basis: 250px;
+  }
+
+  #footer .img-container {
+    margin: 10px 0 0 0;
+    padding: 10px;
+    padding-right: 40px;
+  }
+
+  #footer .insta-icon {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    margin: 20px 0 0 0;
   }
 }
 

@@ -7,6 +7,7 @@ const covidUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-jso
 window.addEventListener("DOMContentLoaded", init);
 
 function init() {
+    document.querySelector(".splash-container a").classList.add("bounce");
     hentJson();
 }
 
