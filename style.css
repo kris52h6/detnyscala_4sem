@@ -438,6 +438,17 @@ body {
   color: white;
 }
 
+.copyright {
+  width: 100vw;
+  height: 60px;
+
+  text-align: center;
+}
+
+.copyright p {
+  font-size: 0.7rem;
+}
+
 @media only screen and (min-width: 768px) {
   #landing-page .splash-middle .splash-text {
     width: 500px;
