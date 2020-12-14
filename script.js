@@ -7,13 +7,54 @@ const instaUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-jso
 const footerUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/openinghour";
 const covidUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/covid";
 
+let carrouselNum = 0;
+
 
 window.addEventListener("DOMContentLoaded", init);
+window.onscroll = function() {stickyMenu()};
+
+const header = document.querySelector("#info");
+const sticky = header.offsetTop;
+const body = document.body;
+
+function stickyMenu() {
+  if(window.pageYOffset > sticky) {
+    document.querySelector(".menuknap").classList.add("sticky");
+  } else {
+    document.querySelector(".menuknap").classList.remove("sticky");
+  }
+
+}
 
 function init() {
     document.querySelector(".splash-container a").classList.add("bounce");
     hentJson();
     initMap();
+    carrousel();
+    document.querySelector(".menuknap").addEventListener("click", toggleMenu);
+
+
+}
+
+
+function toggleMenu() {
+  console.log("toggleMenu");
+  document.querySelector(".menuknap").addEventListener("click", toggleMenu);
+  document.querySelector(".menu").classList.toggle("showmenu");
+  document.querySelector("ul").addEventListener("click", toggleMenu);
+  document.querySelector("body").classList.toggle("bodyHidden");
+
+
+  let erSkjult = document.querySelector(".menu").classList.contains("showmenu");
+  if (erSkjult == true) {
+      document.querySelector(".menuknap").textContent = "✕";
+
+      document.querySelector(".menuknap").classList.add("whiten");
+
+  } else {
+      document.querySelector(".menuknap").textContent = "☰";
+      document.querySelector(".menuknap").classList.remove("whiten");
+  }
 }
 
 async function hentJson(eventJson, instaJson, footerJson, covidJson) {
@@ -22,14 +63,12 @@ async function hentJson(eventJson, instaJson, footerJson, covidJson) {
 
     const responseInsta = await fetch(instaUrl);
     instaJson = await responseInsta.json();
-    console.log(instaJson);
 
     const responseFooter = await fetch(footerUrl);
     footerJson = await responseFooter.json();
 
     const responseCovid = await fetch(covidUrl);
     covidJson = await responseCovid.json();
-    console.log(covidJson);
     vis(eventJson, instaJson, footerJson, covidJson);
    }
 
@@ -46,7 +85,6 @@ function vis(eventJson, instaJson, footerJson, covidJson) {
   const modtagerCovid = document.querySelector(".covidlist");
   const covidSkabelon = document.querySelector("#covid-template");
 
-  console.log(instaJson);
 
 
     modtagerEvent.innerHTML = "";
@@ -96,7 +134,6 @@ function vis(eventJson, instaJson, footerJson, covidJson) {
     footerJson.forEach((openinghour) => {
         const klonFooter = footerSkabelon.cloneNode(true).content;
         klonFooter.querySelector("p").textContent = openinghour.text;
-        console.log(openinghour.text);
         
         modtagerFooter.appendChild(klonFooter);
     })
@@ -107,6 +144,31 @@ function vis(eventJson, instaJson, footerJson, covidJson) {
 }
 
 
+function carrousel() {
+  document.querySelector(".p1").style.display = "none";
+  document.querySelector(".p2").style.display = "none";
+  document.querySelector(".p3").style.display = "none";
+
+
+  setInterval(() => {
+    carrouselNum++;
+    carrouselCount();
+  }, 6000);
+  
+}
+
+
+function carrouselCount() {
+  document.querySelector(".p1").style.display = "none";
+  document.querySelector(".p2").style.display = "none";
+  document.querySelector(".p3").style.display = "none";
+
+
+  if(carrouselNum > 3) {
+    carrouselNum = 1;
+  }
+    document.querySelector(".p" + carrouselNum).style.display = "block";
+}
 
 
 function initMap() {
