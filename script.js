@@ -2,10 +2,11 @@
 
 
 
-const url = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/event";
+const eventUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/event";
 const instaUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/instagramimage"
 const footerUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/openinghour";
 const covidUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/covid";
+
 
 window.addEventListener("DOMContentLoaded", init);
 
@@ -16,7 +17,7 @@ function init() {
 }
 
 async function hentJson(eventJson, instaJson, footerJson, covidJson) {
-    const response = await fetch(url);
+    const response = await fetch(eventUrl);
     eventJson = await response.json();
 
     const responseInsta = await fetch(instaUrl);
@@ -30,7 +31,7 @@ async function hentJson(eventJson, instaJson, footerJson, covidJson) {
     covidJson = await responseCovid.json();
     console.log(covidJson);
     vis(eventJson, instaJson, footerJson, covidJson);
-}
+   }
 
 function vis(eventJson, instaJson, footerJson, covidJson) {
   const modtagerEvent = document.querySelector(".eventlist");
@@ -104,6 +105,8 @@ function vis(eventJson, instaJson, footerJson, covidJson) {
 
 
 }
+
+
 
 
 function initMap() {
