@@ -254,8 +254,9 @@ ul {
 
 .text {
   background-color: #e7e8e3;
-  padding: 20px 10px 20px 20px;
+  padding: 30px 10px 20px 20px;
   margin-bottom: 100px;
+  height: 25vh;
 }
 
 #info .wrapper {
@@ -265,6 +266,13 @@ ul {
 
 #info a {
   text-decoration: underline;
+}
+
+#info .text {
+  background-color: #e7e8e3;
+  padding: 30px 10px 20px 20px;
+  margin-bottom: 100px;
+  height: inherit;
 }
 
 /** arrangementer **/
@@ -310,8 +318,8 @@ ul {
 }
 
 #events .color-container {
-  width: 100%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
   left: 0;
   top: 5%;
   bottom: 0;
@@ -507,6 +515,8 @@ body {
 
   #events .color-container {
     width: 95%;
+    height: 95%;
+
     margin-left: -1px;
   }
 
@@ -640,8 +650,14 @@ body {
     height: 300px;
   }
 
+  #events .color-container {
+    width: 450px;
+    height: 300px;
+    /* margin-left: 35px; */
+  }
+
   #events .color-container2 {
-    margin-left: 100px;
+    margin-left: 35px;
   }
   .parallax {
     /* The image used */
