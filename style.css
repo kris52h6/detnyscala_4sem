@@ -551,6 +551,10 @@ body {
     row-gap: 20px;
   }
 
+  .insta {
+    border-radius: 5px;
+  }
+
   .insta3,
   .insta4,
   .insta5 {
