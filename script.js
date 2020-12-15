@@ -33,6 +33,10 @@ function init() {
   carrousel();
   document.querySelector(".menuknap").addEventListener("click", toggleMenu);
   carrouselCount();
+
+  document.querySelector(".social-button").onclick = function () {
+    window.open("https://www.instagram.com/detnyscala/","_blank");
+};
 }
 
 function toggleMenu() {
