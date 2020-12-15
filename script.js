@@ -2,10 +2,10 @@
 
 
 
-const eventUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/event";
-const instaUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/instagramimage"
-const footerUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/openinghour";
-const covidUrl = "http://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/covid";
+const eventUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/event";
+const instaUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/instagramimage"
+const footerUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/openinghour";
+const covidUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/covid";
 
 let carrouselNum = 0;
 
