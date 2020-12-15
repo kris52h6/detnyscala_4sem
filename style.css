@@ -448,8 +448,8 @@ body {
 }
 
 #footer .insta-icon {
-  width: 50px;
-  height: 50px;
+  width: 20%;
+
   display: inline-block;
   margin: 20px 0 0 0;
 }
@@ -627,8 +627,7 @@ body {
   }
 
   #footer .insta-icon {
-    width: 50px;
-    height: 50px;
+    width: 30%;
     display: inline-block;
     margin: 20px 0 0 0;
   }
