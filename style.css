@@ -53,6 +53,10 @@ p {
   /* font-family: "Montserrat", sans-serif; */
 }
 
+span {
+  font-family: "Quicksand", sans-serif;
+}
+
 /** splash **/
 
 #landing-page .splash-container {
@@ -74,7 +78,7 @@ p {
   background-size: cover;
   background-position: center;
 
-  background-image: url("img/scala.jpg");
+  background-image: url("img/scala_splashv2-100.jpg");
 }
 
 #landing-page .splash-middle {
@@ -200,6 +204,10 @@ ul {
   /* top: 4vw;
   right: 5vw; */
   z-index: 1001;
+}
+
+.menu a:hover {
+  text-decoration: underline;
 }
 
 .sticky {
