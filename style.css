@@ -228,6 +228,11 @@ ul {
   transition: 0.5s;
 }
 
+.hidemenu {
+  transform: translateY(-100%);
+  transition: 0.3s;
+}
+
 .bodyHidden {
   overflow: hidden;
 }

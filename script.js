@@ -41,13 +41,18 @@ function toggleMenu() {
 
   let hidden = document.querySelector(".menu").classList.contains("showmenu");
   if (hidden == true) {
+    console.log("true");
     document.querySelector(".menuknap").textContent = "✕";
-
+    document.querySelector(".menuknap").addEventListener("click", hidemenu);
     document.querySelector(".menuknap").classList.add("whiten");
   } else {
     document.querySelector(".menuknap").textContent = "☰";
     document.querySelector(".menuknap").classList.remove("whiten");
   }
+}
+
+function hidemenu() {
+  document.querySelector(".menu").classList.toggle("hidemenu");
 }
 
 async function hentJson(eventJson, instaJson, footerJson, covidJson) {
@@ -81,7 +86,7 @@ function showEvents(eventJson) {
     klonEvent.querySelector(".img").src = event.img.guid;
     klonEvent.querySelector(".img").alt = event.alt;
     klonEvent.querySelector(".headline").textContent = event.headline;
-    klonEvent.querySelector(".text").textContent = event.text;
+    klonEvent.querySelector(".text").textContent = event.text.replace;
 
     /** bruges som counter, til at kunne target de specifikke elementer i html'en */
     counter++;
