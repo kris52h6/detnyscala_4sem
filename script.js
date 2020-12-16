@@ -1,9 +1,7 @@
 "use strict";
 
-
-
 const eventUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/event";
-const instaUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/instagramimage"
+const instaUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/instagramimage";
 const footerUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/openinghour";
 const covidUrl = "https://kristianhadberg.dk/kea/4sem/detnyscala/wordpress/wp-json/wp/v2/covid";
 
@@ -14,8 +12,8 @@ window.onscroll = function () {
   stickyMenu();
 };
 
-const header = document.querySelector("#info");
-const sticky = header.offsetTop;
+const stickyElm = document.querySelector(".line");
+const sticky = stickyElm.offsetTop;
 const body = document.body;
 
 function stickyMenu() {
@@ -28,10 +26,10 @@ function stickyMenu() {
 
 function init() {
   document.querySelector(".splash-container a").classList.add("bounce");
+  document.querySelector(".menuknap").addEventListener("click", toggleMenu);
   hentJson();
   initMap();
   carrousel();
-  document.querySelector(".menuknap").addEventListener("click", toggleMenu);
   carrouselCount();
 }
 
@@ -99,6 +97,8 @@ function showEvents(eventJson) {
   document.querySelector(".headline2").className = "headline col-md-6 col-md-pull-4";
   document.querySelector(".text2").className = "text col-md-6 col-md-pull-4";
   document.querySelector(".img-container2").className = "img-container col-md-6 col-md-push-6";
+
+  loadAnimations();
 }
 
 function showInsta(instaJson) {
@@ -139,6 +139,43 @@ function showFooter(footerJson, covidJson) {
   });
 
   document.querySelector(".covid").textContent = covidJson[0].text;
+}
+
+function loadAnimations() {
+  const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+  console.log(viewportWidth);
+
+  if (viewportWidth < 1000) {
+    document.querySelector("#info > .container > .row").classList.remove("hidden");
+    document.querySelector(".wrapper").classList.remove("hidden");
+    document.querySelector("#events > div > section > div:nth-child(1)").classList.remove("hidden");
+    document.querySelector("#events > div > section > div:nth-child(2)").classList.remove("hidden");
+    document.querySelector("#events > div > section > div:nth-child(3)").classList.remove("hidden");
+  }
+
+  document.addEventListener("scroll", () => {
+    let scrollFromTop = document.documentElement.scrollTop;
+    if (scrollFromTop > 400 && viewportWidth > 999) {
+      document.querySelector("#info > .container > .row").classList.remove("hidden");
+      document.querySelector("#info > .container > .row").classList.add("showanimation");
+    }
+    if (scrollFromTop > 800 && viewportWidth > 999) {
+      document.querySelector(".wrapper").classList.remove("hidden");
+      document.querySelector(".wrapper").classList.add("showanimation");
+    }
+    if (scrollFromTop > 2000 && viewportWidth > 999) {
+      document.querySelector("#events > div > section > div:nth-child(1)").classList.remove("hidden");
+      document.querySelector("#events > div > section > div:nth-child(1)").classList.add("showanimation");
+    }
+    if (scrollFromTop > 2300 && viewportWidth > 999) {
+      document.querySelector("#events > div > section > div:nth-child(2)").classList.remove("hidden");
+      document.querySelector("#events > div > section > div:nth-child(2)").classList.add("showanimation");
+    }
+    if (scrollFromTop > 2700 && viewportWidth > 999) {
+      document.querySelector("#events > div > section > div:nth-child(3)").classList.remove("hidden");
+      document.querySelector("#events > div > section > div:nth-child(3)").classList.add("showanimation");
+    }
+  });
 }
 
 function carrousel() {

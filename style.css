@@ -634,6 +634,27 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
+  .showanimation {
+    animation: show_kf 1.2s 1 forwards ease;
+  }
+
+  @keyframes show_kf {
+    0% {
+      opacity: 0%;
+      transform: scale(0.9);
+    }
+
+    100% {
+      opacity: 100%;
+      transform: scale(1);
+    }
+  }
+
+  .hidden {
+    opacity: 0%;
+    display: block !important;
+  }
+
   #events .container {
     margin-bottom: 100px;
   }
