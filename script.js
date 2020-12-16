@@ -31,6 +31,10 @@ function init() {
   initMap();
   carrousel();
   carrouselCount();
+
+  document.querySelector(".social-button").onclick = function () {
+    window.open("https://www.instagram.com/detnyscala/", "_blank");
+  };
 }
 
 function toggleMenu() {
@@ -86,7 +90,7 @@ function showEvents(eventJson) {
     klonEvent.querySelector(".img").src = event.img.guid;
     klonEvent.querySelector(".img").alt = event.alt;
     klonEvent.querySelector(".headline").textContent = event.headline;
-    klonEvent.querySelector(".text").textContent = event.text.replace;
+    klonEvent.querySelector(".text").textContent = event.text;
 
     /** bruges som counter, til at kunne target de specifikke elementer i html'en */
     counter++;

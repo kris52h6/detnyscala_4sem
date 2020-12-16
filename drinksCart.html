@@ -27,13 +27,13 @@
 
       .container {
         width: 100%;
-        height: 100vh;
+        /* height: 100vh; */
         object-fit: cover;
         /* filter: grayscale(1); */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        background-image: url("img/wood-100.jpg");
+        /* background-image: url("img/wood-100.jpg"); */
         background-attachment: fixed;
 
         overflow: scroll;
@@ -43,24 +43,43 @@
         justify-content: center;
       }
 
+      .color-board {
+        width: 72vw;
+        height: 82vh;
+
+        position: absolute;
+        top: 5vw;
+        left: 12vw;
+        background-color: #f2a6a6;
+
+        border-radius: 10px;
+      }
+
       .board {
         object-fit: contain;
-        height: 80vh;
-        background-color: #1a1a1a;
+        /* height: 80vh; */
+
+        background-color: #232323;
         border-radius: 10px;
 
-        margin: 3vw;
+        position: absolute;
+        /* top: 2vw; */
+
+        /* margin: 3vw; */
         padding: 1vw;
 
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
       }
 
       .sjusContainer {
         border: solid white;
         border-radius: 10px;
 
-        margin-right: 3vw;
-        padding: 1vw;
+        /* margin-right: 3vw; */
+        margin-bottom: 3vh;
+        padding: 3vw;
       }
 
       .drinksContainer {
@@ -68,7 +87,7 @@
         height: fit-content;
         border-radius: 10px;
 
-        padding: 1vw;
+        padding: 3vw;
       }
 
       .sjusContainer h2 {
@@ -83,8 +102,8 @@
         display: flex;
         justify-content: space-between;
 
-        width: 30vw;
-        height: 3vh;
+        /* width: 30vw; */
+        height: fit-content;
         padding: 10px;
       }
 
@@ -99,7 +118,7 @@
       .oneSjus {
         display: flex;
         justify-content: center;
-        width: 30vw;
+        /* width: 30vw; */
         height: 2vh;
         padding: 10px;
       }
@@ -110,6 +129,116 @@
         margin: 0;
 
         color: white;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .sjusList,
+        .drinksList {
+          z-index: 100;
+        }
+
+        .container {
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+          /* filter: grayscale(1); */
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+          /* background-image: url("img/wood-100.jpg"); */
+          background-attachment: fixed;
+
+          overflow: scroll;
+
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .color-board {
+          width: 72vw;
+          height: 82vh;
+
+          position: absolute;
+          top: 5vw;
+          left: 12vw;
+          background-color: #f2a6a6;
+
+          border-radius: 10px;
+        }
+
+        .board {
+          object-fit: contain;
+          height: 80vh;
+          background-color: #232323;
+          border-radius: 10px;
+
+          position: absolute;
+          top: 2vw;
+
+          /* margin: 3vw; */
+          padding: 1vw;
+
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .sjusContainer {
+          border: solid white;
+          border-radius: 10px;
+
+          margin-right: 3vw;
+          padding: 1vw;
+        }
+
+        .drinksContainer {
+          border: solid white;
+          height: fit-content;
+          border-radius: 10px;
+
+          padding: 1vw;
+        }
+
+        .sjusContainer h2 {
+          text-align: center;
+          color: white;
+          font-size: 3rem;
+
+          margin: 0 0 1vw 0;
+        }
+
+        .oneDrink {
+          display: flex;
+          justify-content: space-between;
+
+          width: 30vw;
+          /* height: fit-content; */
+          padding: 10px;
+        }
+
+        .oneDrink p {
+          font-family: "Bebas Neue", cursive;
+          font-size: 30px;
+          margin: 0;
+
+          color: white;
+        }
+
+        .oneSjus {
+          display: flex;
+          justify-content: center;
+          width: 30vw;
+          height: 2vh;
+          padding: 10px;
+        }
+
+        .oneSjus p {
+          font-family: "Bebas Neue", cursive;
+          font-size: 30px;
+          margin: 0;
+
+          color: white;
+        }
       }
     </style>
   </head>
@@ -127,7 +256,7 @@
           <p class="sjusName"></p>
         </div>
       </template>
-
+      <div class="color-board"></div>
       <div class="board">
         <div class="sjusContainer">
           <h2>
